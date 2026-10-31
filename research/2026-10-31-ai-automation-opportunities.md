@@ -7,7 +7,8 @@ money, favouring niche plays few people are doing, so Lumen can pitch high-ticke
 builders, the Australian proptech market, listings and vendors, prospecting data, social video, case studies,
 back office and AML, leasing and rent roll, voice AI, pricing and pitfalls, wildcards). They used Agent Reach:
 Reddit through the Arctic Shift archive, Exa web search (which also reaches Instagram, Facebook, LinkedIn, X and
-TikTok pages), YouTube search, and trade press. The full notes, with every source URL, are in `raw/`.
+TikTok pages), YouTube search, and trade press. A second pass with Agent Reach 1.6 checked each pick against
+Reddit in full text (section 4b). The full notes, with every source URL, are in `raw/`.
 
 **Read this first.** Almost every results figure in this space is a vendor's or builder's own claim. None of it
 is audited. Figures marked *(vendor)* or *(self-reported)* are claims; figures marked *(estimate)* are our maths.
@@ -22,12 +23,13 @@ Pitch with a measured baseline and a pilot, not with other people's numbers.
    Australia sells well is protecting and growing the property management book, which is the agency's recurring
    income and a sellable asset (each managed property is worth roughly $4,500 to $6,500 of rent-roll value).
 2. **The best three to pitch:**
-   - **Rent Roll Protection system.** Flags landlords about to leave and landlords about to sell, catches
-     managed properties that sell through a competitor (using SA's own title alerts), and finds fees the agency
-     is allowed to charge but never raises. Rare in Australia. Measurable in dollars.
-   - **Property management "autopilot"**, starting with maintenance. An AI handles routine requests, quotes and
-     tradie dispatch, and a person approves anything with money or legal effect. Adelaide's own Toop+Toop has
-     built this in-house (HARLI), which proves the value and that the agency's competitors are moving.
+   - **Rent Roll Protection system.** Flags landlords about to leave and landlords about to sell, and catches
+     managed properties that sell through a competitor (using SA's own title alerts). Rare in Australia.
+     Measurable in dollars. Landlords on Reddit name the exact warning signs it watches for (see section 4b).
+   - **Property management desk assistant**, starting with maintenance. An AI handles routine requests, chases
+     quotes and landlord approvals, and dispatches tradies, and a person approves anything with money or legal
+     effect. Adelaide's own Toop+Toop has built this in-house (HARLI), which proves the value and that the
+     agency's competitors are moving. Keep it behind the property manager, not in front of tenants.
    - **Appraisal-to-listing engine.** Builds the pre-appraisal brief, re-scores every past appraisal against what
      actually sold, and recaptures withdrawn, stale and passed-in listings. Ties straight to commission.
 3. **The best foot in the door:** a paid "Agency Leak Audit" (A$2,500 to $4,500, credited to the build), or a
@@ -126,7 +128,10 @@ to an Adelaide agency that has both sales and property management. If the agency
 - **Build:** Read-only data pull, rules plus Claude reading notes, weekly digest by email. Low to medium
   difficulty, so it's a good low-risk first project.
 
-#### 4.3 Fee-leakage audit
+#### 4.3 Fee-leakage audit (reframe as a fee-accuracy audit)
+- **Reddit check:** weak as "charge more". No agency on Reddit says it under-charges, one SA agent discounts fees
+  on purpose to win business, and landlords scrutinise fee stacks closely (one nearly left over one wrongly
+  charged fee). Pitch it as fee accuracy plus plain-English agreements, with found revenue as a bonus.
 - **What it does:** Reads every management agreement and 12 months of fee history, lists which fees each landlord
   authorised (letting, renewal, inspection, advertising, tribunal, admin), and shows every fee that was allowed but
   never charged. Flags out-of-date agreements for renewal and produces a monthly income-by-fee report.
@@ -140,7 +145,10 @@ to an Adelaide agency that has both sales and property management. If the agency
   a monthly report. Medium difficulty. Also a strong story if the owner ever plans to sell the rent roll: raising
   income per property raises the sale price.
 
-#### 4.4 Property management autopilot, starting with maintenance
+#### 4.4 Property management desk assistant, starting with maintenance
+- **Reddit check:** the real delay landlords and tenants complain about is the quote and landlord-approval loop,
+  not the first reply, so lead with the approval and quote chaser. Tenant-facing bots draw backlash (one company's
+  tour closing rate reportedly fell about 10% after a leasing bot), so don't call it "autopilot" in the pitch.
 - **What it does:** Tenant maintenance requests (email, SMS, portal, after-hours call) are classified, matched to
   the property and lease, and handled: troubleshooting questions, photos requested, the right tradie picked, quotes
   chased, the landlord asked to approve within their limit, the tenant updated, the job closed and the invoice
@@ -163,9 +171,11 @@ to an Adelaide agency that has both sales and property management. If the agency
 
 #### 4.5 SA tenancy-law clock engine
 - **What it does:** Watches the deadlines SA law sets and the PM software doesn't check:
-  - **Water:** a tenant isn't liable if the water invoice isn't passed on within 30 days of SA Water issuing it.
-    The engine reads incoming SA Water bills, separates the tenant's share from the landlord's, drafts the tenant
-    invoice and flags any it's about to miss.
+  - **Water:** a tenant isn't liable if the water invoice isn't passed on within 30 days of SA Water issuing it
+    (Residential Tenancies Act 1995 (SA) s73(3), confirmed on sa.gov.au). The engine reads incoming SA Water
+    bills, separates the tenant's share from the landlord's, drafts the tenant invoice, flags any it's about to
+    miss, and flags usage spikes or a second account early. An Adelaide tenant on Reddit (Jan 2026) faced about
+    $1,500 from an unbilled second water account and a leak; that's the demo story.
   - **Rent increases:** at least 12 months since the last increase and 60 days' written notice. Every rent review is
     checked before it goes out, with a market evidence pack for the landlord.
   - **Rental applications (Form A1, mandatory from 1 Jan 2026):** unsuccessful applicants' data must be destroyed
@@ -309,6 +319,52 @@ emails to the right transaction; and **commission statement prep** for splits an
 
 ---
 
+## 4b. Reddit check (second pass, Agent Reach 1.6)
+
+Agent Reach 1.6 added full-text Reddit search, so three more agents checked each pick against what landlords,
+tenants, vendors, buyers and agents actually say. This confirms the pain, not that agencies will pay: most voices
+are clients complaining about agencies, not principals asking for tools. r/AusPropertyChat is heavily seeded by
+AI vendors, so those posts were discounted. Notes: `raw/14-`, `raw/15-` and `raw/16-`.
+
+| Pick | Reddit evidence | Best quote |
+|---|---|---|
+| Landlord churn radar (4.2) | **Strong.** Landlords name the exact signals: silence while vacant, no inspections, slow repairs, PM turnover. They switch at a vacancy, a re-let, when their PM leaves, or for a rival's fee discount. | "It's been 23 days since [the agency] listed the property on the rental market. And I have not heard anything from the Property Manager yet." Top reply: "They should be ringing you every week." ([r/AusProperty](https://www.reddit.com/r/AusProperty/comments/1r607m1/23_days_and_have_not_heard_anything_yet/)) |
+| Sale-leak radar (4.1) | **Some.** Agencies visibly fight to keep managements when a property sells; nobody describes predicting it. Still rare. | |
+| PM desk assistant (4.4) | **Strong on the pain.** The quote and approval loop is the delay. No Australian operator result found. | |
+| SA tenancy clocks (4.5) | **Some.** Water is the best SA signal (three Adelaide threads, Jul 2025 to Jan 2026). Tenants cite the 12-month and 60-day rent rules and spot agency notice errors. Form A1 never comes up. | "an accumulated charge of approximately $1,500" from an unbilled second water account ([r/Adelaide](https://www.reddit.com/r/Adelaide/comments/1qd7ofk/rental_advice/)) |
+| Property memory | **Strong on the pain.** "Never told, new PM knows nothing, old agency won't hand over history" recurs. | |
+| Fee-leakage audit (4.3) | **Weak as framed.** See 4.3: pitch accuracy, not "charge more". | |
+| AML ops layer (4.10) | **Strong.** Admins carry it, ownership is confused, AUSTRAC wants proof of the work. Check fees seen from $6 to $400. | "it's just been added to my workload as the admin... AML=FML." ([r/AusPropertyChat](https://www.reddit.com/r/AusPropertyChat/comments/1u5e3mg/amlctf_changes_how_are_real_estate_agencies/)); "Since late August, AUSTRAC has been sending out section 167 notices... They want to see the work behind it." |
+| Payment-redirection guard (4.11) | **Strong problem.** Repeated Australian losses (a $500K deposit, 10% deposits, lookalike domains), including an agency's own mailbox being hacked. The only defence people mention is a phone call-back. | |
+| Vendor report (4.8) | **Strong on the pain**, with a twist: agents say clients want the "why", not charts, and won't send stats unchecked. Make it an agent-reviewed draft with a written read on price, not a dashboard. | "Our agent would call every Monday with 'feedback from the weekend.' It was always vibes." ([r/AusPropertyChat](https://www.reddit.com/r/AusPropertyChat/comments/1unm3l5/sellers_whove_been_through_a_campaign_recently/)) |
+| Post-auction recapture (4.7) | **Some.** Underbidders say agents go quiet afterwards; no agent says it costs them listings. | |
+| Appraisal-to-listing engine (4.6) | **Some.** Vendors shop agents and distrust the highest appraisal; no agent voices the lost-appraisal follow-up pain. | |
+| Form 1 pre-check (4.9) | **Weak.** Only buyer-side confusion about cooling-off timing; no admin describes the burden. Validate with the agency before pitching. | |
+
+**New ideas from the Reddit pass worth adding:**
+- **Condition report and bond-claim evidence engine.** The PM records a short video at the ingoing and outgoing
+  inspections; AI writes a specific room-by-room report (not "good" for every room), pairs ingoing with outgoing
+  evidence, separates likely wear and tear from damage, and drafts a bond-claim pack for SACAT, for a person to
+  review. Tenants say agents write "good" everywhere and it decides bond disputes. One US operator says
+  video-to-report cut documentation from about an hour to 12 minutes per unit *(self-reported)*.
+- **Offer register.** Logs every offer with a timestamp and confirms to the vendor that it was presented. One
+  vendor's higher offer "went to spam" and was never presented. Cheap, and protects the agency's licence.
+- **Weekly vacancy digest for landlords.** A short automatic update while a property is vacant (enquiries,
+  inspections, applications, feedback). Directly answers the "23 days and not heard anything" complaint; a quick
+  first win inside the churn radar.
+- **Approvals and quote chaser.** The first module of 4.4: chases tradie quotes and landlord approvals until done.
+- **"Your buyer's AI will read your contract" scan.** Buyers already run contracts through AI tools, so check the
+  vendor's documents for anything a buyer's AI would flag before listing. An extension of 4.9.
+- **Agency-wide read-only data layer.** One connector across the PM system, sales CRM and mailbox, so staff's
+  own Claude can answer questions across all of it. PropertyMe's AiMe Connect only sees PropertyMe. Treat it as
+  infrastructure under the other builds, not a headline.
+
+**Reddit's main warning:** goodwill toward AI is for back-office work. Backlash is about visible client-facing
+errors (a pasted ChatGPT prompt left in a listing, invented schools, doctored photos) and AI-sounding outreach.
+Buyers also cite the Spam Act and treat "contact agent" listings as data harvesting, so build consent in first.
+
+---
+
 ## 5. How to sell it
 
 **Offer ladder** (price points above A$7.5k are our estimates; no published Australian real estate build above
@@ -319,7 +375,7 @@ about A$7.5k was found, so test them on the first deal):
 | 1. Agency Leak Audit | 2 weeks, fixed fee, credited to the build if signed within 60 days. Principal interview on money, short interviews with agents, PMs and admin, a one-week time log, a 50-record data check, one real job traced end to end. Output: ranked list with dollars per workflow, a "don't automate" list, a named owner for each item, fixed quotes for the top three. | A$2,500 to $4,500 |
 | 2. First build | Payment guard, weekly rent-roll briefing, or the open-home voice memo flow. Fast, visible, low risk. | A$3k to $8k |
 | 3. Core system | Rent Roll Protection (4.1 to 4.3) or the Appraisal-to-listing engine (4.6) | A$15k to $30k plus A$1k to $2.5k a month |
-| 4. Flagship | PM autopilot (4.4 plus 4.5) | A$25k to $50k plus retainer |
+| 4. Flagship | PM desk assistant (4.4 plus 4.5) | A$25k to $50k plus retainer |
 
 Comparable paid audits: Finyki US$1.5k or US$7.5k, Mindflows €3,500, Numoru US$8k to $15k, all credited to the
 build. Avoid revenue share on commission (messy, and a trust-account grey area).
@@ -394,7 +450,9 @@ Full notes with every source URL are in `raw/` (one file per research angle). Ke
 - Backbone Automation pricing (AU): https://backboneautomation.com.au/real-estate
 - ACCC payment redirection scams: https://www.accc.gov.au/media-release/beware-of-fake-invoices-from-scammers-impersonating-businesses
 
-Gaps: Reddit coverage was thinner than hoped (the archive rate-limits heavily, and r/realtors removes vendor
-threads). Facebook and Instagram were reached through web search only, not logged-in browsing. YouTube transcripts
-were blocked, so videos were judged from titles and descriptions. SA legal points come from public summaries (SA
+Gaps: the second pass (Agent Reach 1.6) searched Reddit in full text, but single threads couldn't be opened, so
+quotes come from search results and some are cut short. Adelaide and SA voices are thin. Facebook, Instagram and X
+were reached through web search only, not logged-in browsing (`HANDOFF-social-research.md` has a prompt to run
+that part on Troy's computer). YouTube transcripts were rate-limited, so videos were judged from titles and
+descriptions. SA legal points come from public summaries (SA
 Law Handbook, CBS, AUSTRAC), not legal advice.
